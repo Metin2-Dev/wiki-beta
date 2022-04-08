@@ -31,10 +31,9 @@ author = 'RewardMetin2'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-	'sphinx.ext.autosectionlabel',
-	'sphinx.ext.autodoc',
 	'myst_parser',
-	'edit_on_github'
+	'sphinx_rtd_theme',
+	'edit_on_github',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -98,6 +97,9 @@ html_static_path = ['_static']
 
 # Pygments configuration
 pygments_style = "vs"
+
+# Supress Warning
+surpress_warnings = ['autosectionlabel.*']
 
 
 # Edit on Github configuration

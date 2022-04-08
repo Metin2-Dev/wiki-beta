@@ -1,12 +1,8 @@
-<!-- LINKS -->
-[script-format]: script_file.html
-<!-- LINKS -->
-
-
 # Sub Format (.sub)
 
 The Sub-image format is a subset format of [Script Format](Script.md) that holds
 a location rectangle that tells where an image inside an image is
+
 
 ## Format Structure
 | Name    | Description                          | Possible Values                      |

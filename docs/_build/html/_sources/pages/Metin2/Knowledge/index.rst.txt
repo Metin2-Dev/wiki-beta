@@ -7,4 +7,6 @@ Knowledge
    :name: toc-metin2-knowledge
 
    Tutorials/index
+   Compatibility/index
+
 

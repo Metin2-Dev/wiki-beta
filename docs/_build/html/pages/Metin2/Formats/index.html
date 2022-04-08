@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Formats &mdash; Wiki  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -23,7 +22,7 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Script Format" href="Script.html" />
+    <link rel="next" title="Encrypted Object" href="Encrypted-Object.html" />
     <link rel="prev" title="Packets" href="../Networking/Packets/index.html" /> 
 </head>
 
@@ -60,6 +59,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../Knowledge/Tutorials/index.html">Tutorials</a><ul class="simple">
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../Knowledge/Compatibility/index.html">Compatibility</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Knowledge/Compatibility/index.html#compatible-platforms">Compatible Platforms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Knowledge/Compatibility/index.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Knowledge/Compatibility/index.html#server">Server</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Networking/index.html">Networking</a><ul>
@@ -69,10 +74,22 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Formats</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Encrypted-Object.html">Encrypted Object</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Encrypted-Object.html#header">Header</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Encrypted-Object.html#data-compression">Data Compression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Encrypted-Object.html#data-encryption">Data Encryption</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="Script.html">Script Format</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Script.html#group">Group</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Script.html#list">List</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Script.html#used-in">Used In</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Property.html">Property</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Property.html#header">Header</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Property.html#fields">Fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Property.html#supported-properties">Supported Properties</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="Sub.html">Sub Format (.sub)</a><ul>
@@ -88,7 +105,16 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">About</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../About/index.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../About/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../About/Contributing.html">Contributing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../About/Contributing.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../About/Contributing.html#content">Content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../About/Contributing.html#licensing">Licensing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../About/Contributing.html#pull-requests-approval">Pull Requests / Approval</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -116,23 +142,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="formats">
-<h1>Formats<a class="headerlink" href="#formats" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="formats">
+<h1>Formats<a class="headerlink" href="#formats" title="Permalink to this headline"></a></h1>
 <div class="toctree-wrapper compound" id="toc-metin2-formats">
 <p class="caption" role="heading"><span class="caption-text">Formats</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="Encrypted-Object.html">Encrypted Object</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Script.html">Script Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Property.html">Property</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sub.html">Sub Format (.sub)</a></li>
 </ul>
 </div>
-</section>
+</div>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../Networking/Packets/index.html" class="btn btn-neutral float-left" title="Packets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Script.html" class="btn btn-neutral float-right" title="Script Format" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Encrypted-Object.html" class="btn btn-neutral float-right" title="Encrypted Object" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
