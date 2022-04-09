@@ -4,15 +4,16 @@ that hold information about properties of several types, telling
 what 3D objects are so a Map knows how to display them
 
 
-
 ## Header
 
 The header is used to identify the objects, it works as the object metadata
 that is used on other files like AreaData
 
-The first line has to be `YPRT`, the second line a CRC32 number and the
-rest should be the [Script Format](Script.md) content as below in 
+The first line has to be `YPRT` for the magic check, the second
+line a CRC32 number and the rest should be the [Script Format](Script.md) content as below in 
 {ref}`Supported Properties <supported-properties>`
+
+[//]: (TODO Add example file header and fields for each type)
 
 
 | Name  | Description                              | Value     |
@@ -21,39 +22,45 @@ rest should be the [Script Format](Script.md) content as below in
 | CRC32 | Second line in the file - Identification | Any CRC32 |
 
 
-## Fields
+## Script Fields
 
-| Name         | Description   | Possible Values                |
-|--------------|---------------|--------------------------------|
-| PropertyName | Property Name | String                         |
-| PropertyType | Property Type | String of supported type below |
+After the two lines, there is two required fields necessary,
+used to tell its name and which type it is
+
+| Name         | Description   | Possible Values          |
+|--------------|---------------|--------------------------|
+| PropertyName | Property Name | String                   |
+| PropertyType | Property Type | String of supported type |
+
+The PropertyType specifies which extension the file **must** have,
+each specific type has its own fields
 
 
 (supported-properties)=
 ## Supported Properties
 
-A list of extensions and their respective properties type
+List of property types and their extensions
 
-| Name         | Extension | Description                            |
-|--------------|-----------|----------------------------------------|
-| None         | .pr       | Empty Property                         |
-| Tree         | .ptr      | Tree object                            |
-| Building     | .prb      | Map object                             |
-| Effect       | .pte      | Unknown purpose                        |
-| Ambience     | .pra      | Unknown purpose                        |
-| DungeonBlock | .prd      | Block that represent area of a dungeon |
-
-
-### Building
-
-| Name         | Description | Possible Values |
-|--------------|-------------|-----------------|
-| buildingfile |             | String          |
-| shadowflag   |             | Boolean Integer |
+| Name         | Extension | Description          |
+|--------------|-----------|----------------------|
+| None         | .pr       | No extra fields      |
+| Tree         | .ptr      | Tree object          |
+| Building     | .prb      | Map object           |
+| Effect       | .pte      | Unknown              |
+| Ambience     | .pra      | Unknown              |
+| DungeonBlock | .prd      | Dungeon Block object |
 
 
-### Dungeon Block
+### Building Fields
 
-| Name             | Description | Possible Values |
-|------------------|-------------|-----------------|
-| dungeonblockfile |             | String          |
+| Name         | Description                                    | Possible Values                            |
+|--------------|------------------------------------------------|--------------------------------------------|
+| buildingfile | GR2 Model Path                                 | String                                     |
+| shadowflag   | Model Shadow Flag (presumably, however unused) | Boolean (1 = true, 0 or undefined = false) |
+
+
+### Dungeon Block Fields
+
+| Name             | Description                        | Possible Values |
+|------------------|------------------------------------|-----------------|
+| dungeonblockfile | GR2 Model Path (loaded as a block) | String          |

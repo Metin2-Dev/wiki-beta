@@ -58,6 +58,7 @@ correspond to the Magic used to check if XTEA decryption was successful
 Otherwise, the bytes in <span style="color:grey">Black</span> will be
 equal to the bytes in <span style="color:red">Red</span>
 
+[//]: (TODO Explain how and why the Last Magic is encrypted)
 
 ### Known XTEA keys
 | Used In          | Key (16 bytes)                                   |
