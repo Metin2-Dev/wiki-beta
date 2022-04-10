@@ -10,6 +10,8 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
+import datetime
+
 import sphinx_rtd_theme
 import os
 import sys
@@ -21,7 +23,7 @@ sys.path.insert(0, os.path.abspath('_ext'))
 # -- Project information -----------------------------------------------------
 
 project = 'Wiki'
-copyright = '2022, RewardMetin2'
+copyright = f'2018-{datetime.datetime.now().year}'
 author = 'RewardMetin2'
 
 
@@ -31,10 +33,9 @@ author = 'RewardMetin2'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-	'sphinx.ext.autosectionlabel',
-	'sphinx.ext.autodoc',
 	'myst_parser',
-	'edit_on_github'
+	'sphinx_rtd_theme',
+	'edit_on_github',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -98,6 +99,9 @@ html_static_path = ['_static']
 
 # Pygments configuration
 pygments_style = "vs"
+
+# Supress Warning
+surpress_warnings = ['autosectionlabel.*']
 
 
 # Edit on Github configuration
