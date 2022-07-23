@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Script Format &mdash; Wiki  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/algolia.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/rtd_dark.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/js/external-hyperlinks.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Property" href="Property.html" />
+    <link rel="prev" title="Encrypted Object" href="Encrypted-Object.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> Wiki
+            <img src="../../../_static/128_icon.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Wiki</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../Metin1/index.html">Metin1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Metin1/Formats/index.html">Formats</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Metin1/Formats/Tar.html">Tar Format (.tar)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Metin1/Formats/Tar.html#format-structure-in-order">Format Structure (in order)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Metin2</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Knowledge/index.html">Knowledge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Knowledge/Tutorials/index.html">Tutorials</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Knowledge/Compatibility/index.html">Compatibility</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Knowledge/Compatibility/index.html#compatible-platforms">Compatible Platforms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Knowledge/Compatibility/index.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Knowledge/Compatibility/index.html#server">Server</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Networking/index.html">Networking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Networking/Packets/index.html">Packets</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Formats</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Encrypted-Object.html">Encrypted Object</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Encrypted-Object.html#header">Header</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Encrypted-Object.html#data-compression">Data Compression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Encrypted-Object.html#data-encryption">Data Encryption</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Script Format</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#group">Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#list">List</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#used-in">Used In</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Property.html">Property</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Property.html#header">Header</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Property.html#script-fields">Script Fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Property.html#supported-properties">Supported Properties</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Sub.html">Sub Format (.sub)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Sub.html#format-structure">Format Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Sub.html#file-example">File Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Sub.html#versions">Versions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../About/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../About/Contributing.html">Contributing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../About/Contributing.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../About/Contributing.html#content">Content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../About/Contributing.html#licensing">Licensing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../About/Contributing.html#pull-requests-approval">Pull Requests / Approval</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">Metin2</a> &raquo;</li>
+          <li><a href="index.html">Formats</a> &raquo;</li>
+      <li>Script Format</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/RewardMetin2/Wiki/blob/master/docs/pages/Metin2/Formats/Script.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="script-format">
+<h1>Script Format<a class="headerlink" href="#script-format" title="Permalink to this headline"></a></h1>
+<p><span class="xref myst">//</span>: (TODO: Finish transferring the page from original wiki)</p>
+<p>The Script format is a text file that uses a declarative way of
+telling information, being like a dictionary that can contain
+Groups and Lists, considering it the JSON format of Metin2</p>
+<p>Comments can be declared by * or // being present in the start of a line</p>
+<div class="section" id="group">
+<h2>Group<a class="headerlink" href="#group" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Groups</span> <span class="n">Foo</span>
+<span class="p">{</span>
+  <span class="n">Value</span>  <span class="s2">&quot;val&quot;</span>
+  <span class="n">Value2</span>  <span class="mi">10</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="list">
+<h2>List<a class="headerlink" href="#list" title="Permalink to this headline"></a></h2>
+<p><strong>Example</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">List</span> <span class="n">Foo</span>
+<span class="p">{</span>
+  <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="used-in">
+<h2>Used In<a class="headerlink" href="#used-in" title="Permalink to this headline"></a></h2>
+<div class="section" id="subsets">
+<h3>Subsets<a class="headerlink" href="#subsets" title="Permalink to this headline"></a></h3>
+<p>.msm (Metin2 Script Mesh)
+.txt (various text files, see below)
+.mss (Metin2 Script Sound)
+.prt (Object Property)
+.mse (Metin2 Script Effect)
+.msf (Metin2 Script ?)
+.msa (Metin2 Script animation)
+.sub (Subimage)
+.msenv (Metin2 Script Environment)</p>
+</div>
+<div class="section" id="files">
+<h3>Files<a class="headerlink" href="#files" title="Permalink to this headline"></a></h3>
+<div class="section" id="text-files-root-locale">
+<h4>Text files (root/locale)<a class="headerlink" href="#text-files-root-locale" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>atlasinfo.txt</p></li>
+<li><p>npclist.txt</p></li>
+<li><p>item_list.txt</p></li>
+<li><p>item_scale.txt</p></li>
+<li><p>loading_tip_list.txt</p></li>
+<li><p>grkblk.txt</p></li>
+<li><p>monster_card.txt</p></li>
+<li><p>monster_card_achiev.txt</p></li>
+<li><p>partymatch_info.txt</p></li>
+<li><p>race_height.txt</p></li>
+<li><p>skilltable.txt</p></li>
+<li><p>user_situation.txt</p></li>
+<li><p>locale/map/point txt files</p></li>
+<li><p>locale/shungmahee tower</p></li>
+<li><p>guildbuildinglist.txt</p></li>
+<li><p>itemdesc.txt</p></li>
+<li><p>locale_string.txt</p></li>
+<li><p>locale_quest.txt</p></li>
+<li><p>locale_quiz.txt</p></li>
+<li><p>locale_interface.txt</p></li>
+<li><p>locale_game.txt</p></li>
+<li><p>loading_tip_vnum.txt</p></li>
+<li><p>pet_skill.txt</p></li>
+<li><p>shop_deco.txt</p></li>
+<li><p>skilldesc.txt</p></li>
+<li><p>web_linked_banner.txt</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="maps">
+<h3>Maps<a class="headerlink" href="#maps" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>AreaData.txt</p></li>
+<li><p>AreaProperty.txt</p></li>
+<li><p>AreaAmbienceData.txt</p></li>
+<li><p>Settings.txt</p></li>
+<li><p>MapProperty.txt</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Encrypted-Object.html" class="btn btn-neutral float-left" title="Encrypted Object" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Property.html" class="btn btn-neutral float-right" title="Property" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2022.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

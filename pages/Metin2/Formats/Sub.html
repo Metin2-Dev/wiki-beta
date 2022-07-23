@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sub Format (.sub) &mdash; Wiki  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/algolia.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/rtd_dark.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/js/external-hyperlinks.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="About" href="../../About/index.html" />
+    <link rel="prev" title="Property" href="Property.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> Wiki
+            <img src="../../../_static/128_icon.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Wiki</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../Metin1/index.html">Metin1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Metin1/Formats/index.html">Formats</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Metin1/Formats/Tar.html">Tar Format (.tar)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Metin1/Formats/Tar.html#format-structure-in-order">Format Structure (in order)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Metin2</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Knowledge/index.html">Knowledge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Knowledge/Tutorials/index.html">Tutorials</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Knowledge/Compatibility/index.html">Compatibility</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Knowledge/Compatibility/index.html#compatible-platforms">Compatible Platforms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Knowledge/Compatibility/index.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Knowledge/Compatibility/index.html#server">Server</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Networking/index.html">Networking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Networking/Packets/index.html">Packets</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Formats</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Encrypted-Object.html">Encrypted Object</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Encrypted-Object.html#header">Header</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Encrypted-Object.html#data-compression">Data Compression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Encrypted-Object.html#data-encryption">Data Encryption</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Script.html">Script Format</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Script.html#group">Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Script.html#list">List</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Script.html#used-in">Used In</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Property.html">Property</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Property.html#header">Header</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Property.html#script-fields">Script Fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Property.html#supported-properties">Supported Properties</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Sub Format (.sub)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#format-structure">Format Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-example">File Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#versions">Versions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../About/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../About/Contributing.html">Contributing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../About/Contributing.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../About/Contributing.html#content">Content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../About/Contributing.html#licensing">Licensing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../About/Contributing.html#pull-requests-approval">Pull Requests / Approval</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">Metin2</a> &raquo;</li>
+          <li><a href="index.html">Formats</a> &raquo;</li>
+      <li>Sub Format (.sub)</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/RewardMetin2/Wiki/blob/master/docs/pages/Metin2/Formats/Sub.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="sub-format-sub">
+<h1>Sub Format (.sub)<a class="headerlink" href="#sub-format-sub" title="Permalink to this headline"></a></h1>
+<p>The Sub-image format is a subset format of <a class="reference internal" href="Script.html"><span class="doc std std-doc">Script Format</span></a> that holds
+a location rectangle that tells where an image inside an image is</p>
+<div class="section" id="format-structure">
+<h2>Format Structure<a class="headerlink" href="#format-structure" title="Permalink to this headline"></a></h2>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Possible Values</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>title</p></td>
+<td><p>Tells which type of sub script it is</p></td>
+<td><p>Must always be the value ‘subimage’</p></td>
+</tr>
+<tr class="row-odd"><td><p>version</p></td>
+<td><p>Version</p></td>
+<td><p>1.0, 2.0 (check possibilities below)</p></td>
+</tr>
+<tr class="row-even"><td><p>image</p></td>
+<td><p>Filename of the base image</p></td>
+<td><p>String (including commas)</p></td>
+</tr>
+<tr class="row-odd"><td><p>left</p></td>
+<td><p>Subimage X Start Position</p></td>
+<td><p>Integer</p></td>
+</tr>
+<tr class="row-even"><td><p>top</p></td>
+<td><p>SubImage Y Start Position</p></td>
+<td><p>Integer</p></td>
+</tr>
+<tr class="row-odd"><td><p>right</p></td>
+<td><p>Subimage X End Position</p></td>
+<td><p>Integer</p></td>
+</tr>
+<tr class="row-even"><td><p>bottom</p></td>
+<td><p>Subimage Y End Position</p></td>
+<td><p>Integer</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="file-example">
+<h2>File Example<a class="headerlink" href="#file-example" title="Permalink to this headline"></a></h2>
+<p><em>sub-image-example.sub</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">title</span> <span class="n">subImage</span>
+<span class="n">version</span> <span class="mf">1.0</span>
+<span class="n">image</span> <span class="s2">&quot;image.dds&quot;</span>
+<span class="n">left</span> <span class="mi">0</span>
+<span class="n">top</span> <span class="mi">0</span>
+<span class="n">right</span> <span class="mi">100</span>
+<span class="n">bottom</span> <span class="mi">100</span>
+</pre></div>
+</div>
+<div class="section" id="image">
+<h3>Image<a class="headerlink" href="#image" title="Permalink to this headline"></a></h3>
+<p>image-example.dds (200x200)</p>
+<p><img alt="Base image example" src="../../../_images/image_example.png" /></p>
+</div>
+<div class="section" id="sub-image">
+<h3>Sub-image<a class="headerlink" href="#sub-image" title="Permalink to this headline"></a></h3>
+<p>result sub-image (100x100)</p>
+<p><img alt="Sub-image of base image example" src="../../../_images/sub-image_example.png" /></p>
+</div>
+</div>
+<div class="section" id="versions">
+<h2>Versions<a class="headerlink" href="#versions" title="Permalink to this headline"></a></h2>
+<p>The version field tells which base path the image should be loaded from</p>
+<div class="section" id="id1">
+<h3>1.0<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
+<p>The base directory of the file will be “D:/ymir work/ui”</p>
+<p><strong>Example</strong></p>
+<p>If image field is “sub-image_example.dds”, the full path will be
+“D:/ymir work/ui/sub-image_example.dds”</p>
+</div>
+<div class="section" id="id2">
+<h3>2.0<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
+<p>The base directory of the file will be the sub-image file directory</p>
+<p><strong>Example</strong></p>
+<p>if the sub file located in “sub/example/” and if
+the image field is “sub-image_example.dds”, the full path will be
+“sub/example/sub-image_example.dds”</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Property.html" class="btn btn-neutral float-left" title="Property" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../About/index.html" class="btn btn-neutral float-right" title="About" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2022.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
