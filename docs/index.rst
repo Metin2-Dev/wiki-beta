@@ -1,4 +1,4 @@
-Welcome to the Metin2Dev Wiki
+Welcome to the Metin2 Wiki
 ==============================
 
 .. toctree::
@@ -7,8 +7,16 @@ Welcome to the Metin2Dev Wiki
    :name: root-toc-wiki
    :hidden:
 
-   pages/Metin1/index
-   pages/Metin2/index
+   pages/Topics/index
+   pages/Knowledge/index
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Knowledge
+   :name: root-toc-knowledge
+   :hidden:
+
 
 .. toctree::
    :maxdepth: 1
@@ -19,18 +27,13 @@ Welcome to the Metin2Dev Wiki
    pages/About/index
 
 
-=> formerly `RewardMetin2 <https://rewardmetin2.altervista.org/index.php?title=Main_Page>`_
+In this wiki, you will find documentation and references
+about how Metin2 works internally, as in theories.
 
-Inside this wiki, you will find tutorials, references or documentation about the internals of Metin2.
+All of the information here is based on the official Metin2,
+no variations made by unofficial origins.
 
-If you're new to the world of Metin2 private servers, check out the
-`Basic Tutorials on Metin2Dev. <https://metin2.dev/board/forum/110-basic-tutorials-beginners/>`_
-
-The wiki is also open for contributions or changes, make sure to read
+The wiki is open for contributions, read the guidelines in
 :doc:`/pages/About/Contributing`
 
-If you are looking for help, you can visit one of these channels
- * `Metin2Dev Board <https://metin2.dev>`_
- * `Metin2Dev Discord <https://metin2.dev/discord/invite/wzwx4CPHDF/>`_
- * `RewardMetin2 Discord <https://discord.gg/gzdPR7t>`_
 

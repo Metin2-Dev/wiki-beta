@@ -1,0 +1,85 @@
+ScriptType RaceDataScript
+
+BaseModelFileName   "/directory/to/base_model.extension"
+
+Group HairData
+{
+    PathName    "/directory/to/hair_models"
+    HairDataCount   2
+
+    Group HairData00
+    {
+        HairIndex   0
+        Model   "/sub-directory/model.extension"
+    }
+    Group HairData01
+    {
+        HairIndex   0
+        Model   "/sub-directory/model.extension"
+    }
+}
+
+Group ShapeData
+{
+    PathName    "/directory/to/shape_models"
+
+    ShapeDataCount  2
+
+    Group ShapeData00
+    {
+        ShapeIndex  0
+
+        Model   "sub-directory/model.extension"
+        SourceSkin  "sub-directory/model_texture0.extension"
+        TargetSkin  "sub-directory/model_texture0.extension"
+    }
+    Group ShapeData01
+    {
+        ShapeIndex  1
+
+        Model   "sub-directory/model.extension"
+        SourceSkin  "sub-directory/model_texture0.extension"
+        TargetSkin  "sub-directory/model_texture1.extension"
+    }
+}
+
+Group AttachingData
+{
+    AttachingDataCount       2
+
+    Group AttachingData00
+    {
+        AttachingDataType    1
+
+        isAttaching          0
+        AttachingModelIndex  0
+        AttachingBoneName    "bone_name1"
+
+        CollisionType        1
+
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           10.00
+            Position         0.000000 0.000000 20.000000
+        }
+    }
+
+    Group AttachingData01
+    {
+        AttachingDataType    1
+
+        isAttaching          0
+        AttachingModelIndex  0
+        AttachingBoneName    "bone_name1"
+
+        CollisionType        1
+
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           10.00
+            Position         0.000000 0.000000 20.000000
+        }
+    }
+}
