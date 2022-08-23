@@ -10,6 +10,13 @@ Welcome to the Metin2 Wiki
    pages/Topics/index
    pages/Knowledge/index
 
+.. toctree::
+   :maxdepth: 1
+   :caption: History
+   :name: root-toc-history
+   :hidden:
+
+   pages/History/index
 
 .. toctree::
    :maxdepth: 1

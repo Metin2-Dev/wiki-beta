@@ -1,7 +1,9 @@
-Packets
+Data
 ========
 
 .. toctree::
    :maxdepth: 1
    :caption: Formats
-   :name: toc-metin2-networking-packets
+   :name: toc-topics-networking-data
+
+   Packets/index

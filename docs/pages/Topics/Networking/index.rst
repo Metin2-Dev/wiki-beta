@@ -6,6 +6,8 @@ Networking
    :caption: Formats
    :name: toc-metin2-networking
 
-   Packets/index
-
-   Encryption
+   Flow
+   Phases
+   Synchronization/index
+   Data/index
+   Encryption/index

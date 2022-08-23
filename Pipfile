@@ -16,3 +16,4 @@ python_version = "3.10"
 
 [scripts]
 build = "pipenv run cd docs && make html"
+# open = ""
