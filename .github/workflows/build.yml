@@ -2,8 +2,9 @@ name: Build Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["beta", "development" ]
+  pull_request:
+    branches: ["beta", "development" ]
 
 jobs:
   build:
