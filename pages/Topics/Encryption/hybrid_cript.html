@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HybridCrypt (Type 4) &mdash; Wiki  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/algolia.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/rtd_dark.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/js/external-hyperlinks.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="HybridCrypt+ (Type 5)" href="hybrid_cript_plus.html" />
+    <link rel="prev" title="Encryption" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> Wiki
+            <img src="../../../_static/128_icon.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Wiki</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Topics</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Encryption</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">HybridCrypt (Type 4)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#distinction">Distinction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#composition">Composition</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="hybrid_cript_plus.html">HybridCrypt+ (Type 5)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hybrid_cript_plus.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hybrid_cript_plus.html#distinction">Distinction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hybrid_cript_plus.html#composition">Composition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Formats/index.html">Formats</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Formats/Map/index.html">Map</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Formats/Map/Chunk/index.html">Chunk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Formats/Map/index.html#directory-composition">Directory Composition</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Formats/Scripts/index.html">Script</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Formats/Scripts/Base.html">Script Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Formats/Scripts/Property.html">Property</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Formats/Scripts/Sub.html">Sub Format (.sub)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Formats/Entity/index.html">Entity</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Formats/Entity/Models/index.html">Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Formats/Entity/Motion.html">Motion Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Formats/Entity/Effect.html">Effect Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Formats/Entity/Sound.html">Sound Data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Formats/Pack/index.html">Pack</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Formats/Pack/eter.html">EterPack</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Formats/Protos/index.html">Protos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Formats/Protos/Item.html">Item Proto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Formats/Protos/Mob.html">Mob Proto</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Formats/Deprecated/index.html">Deprecated</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Formats/Deprecated/texture_caching.html">DDS Texture Caching</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Formats/Encrypted-Object.html">Encrypted Object</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Formats/Encrypted-Object.html#header">Header</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Formats/Encrypted-Object.html#data-compression">Data Compression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Formats/Encrypted-Object.html#data-encryption">Data Encryption</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Networking/index.html">Networking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Networking/Flow.html">Flow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Networking/Flow.html#concept">Concept</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Networking/Phases.html">Phases</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Networking/Phases.html#login-phase">Login Phase</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Networking/Synchronization/index.html">Synchronization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Networking/Synchronization/Handshake.html">Handshake</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Networking/Synchronization/IPE.html">IPE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Networking/Data/index.html">Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Networking/Data/Packets/index.html">Packets</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Networking/Encryption/index.html">Encryption</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Networking/Encryption/Overview.html">Encryption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Networking/Encryption/Encryption.html">Network Encryption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Networking/Encryption/IPE.html">IPE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Networking/Encryption/XTEA.html">XTEA</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Knowledge/index.html">Knowledge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Knowledge/Compatibility/index.html">Compatibility</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Knowledge/Compatibility/improvements.html">Possible Improvements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Knowledge/Compatibility/improvements.html#id1"></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Knowledge/Compatibility/index.html#compatible-platforms">Compatible Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Knowledge/Compatibility/index.html#client">Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Knowledge/Compatibility/index.html#server">Server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Knowledge/Compatibility/index.html#freebsd">FreeBSD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Knowledge/Compatibility/index.html#bsd-extensions-file-monitoring">BSD Extensions/File Monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Knowledge/Compatibility/index.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Knowledge/Tutorials/index.html">Tutorials</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Knowledge/ThirdParty/index.html">Third Party</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Knowledge/ThirdParty/Requirements.html">Tutorial</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Knowledge/ThirdParty/Requirements.html#introduction">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Knowledge/ThirdParty/libraries.html">Third Party Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Knowledge/ThirdParty/libraries.html#introduction">Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Knowledge/ThirdParty/libraries.html#client">Client</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Knowledge/ThirdParty/libraries.html#server">Server</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Knowledge/ThirdParty/dependencies.html">Dependencies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Knowledge/ThirdParty/dependencies.html#client-binary">Client Binary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Knowledge/ThirdParty/dependencies.html#directx-8-and-windows-32bit-native-apis">DirectX 8 and Windows 32bit native APIs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../History/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../History/Network.html">Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../History/Network.html#encryption">Encryption</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../History/Network.html#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../About/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../About/Contributing.html">Contributing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../About/Contributing.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../About/Contributing.html#content">Content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../About/Contributing.html#proposing-changes">Proposing Changes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../About/Contributing.html#pull-requests-approval">Pull Requests / Approval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../About/Contributing.html#licensing">Licensing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">Topics</a> &raquo;</li>
+          <li><a href="index.html">Encryption</a> &raquo;</li>
+      <li>HybridCrypt (Type 4)</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/RewardMetin2/Wiki/blob/master/docs/pages/Topics/Encryption/hybrid_cript.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="hybridcrypt-type-4">
+<h1>HybridCrypt (Type 4)<a class="headerlink" href="#hybridcrypt-type-4" title="Permalink to this heading"></a></h1>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading"></a></h2>
+</div>
+<div class="section" id="distinction">
+<h2>Distinction<a class="headerlink" href="#distinction" title="Permalink to this heading"></a></h2>
+<p>What makes this algorithm type explicitly considered more secure
+compared to other types are the two key factors below</p>
+<div class="section" id="usability">
+<h3>Usability<a class="headerlink" href="#usability" title="Permalink to this heading"></a></h3>
+<p>The algorithm that is used changes from the file name,
+this means that new algorithms can be used and implement in
+newer versions</p>
+</div>
+<div class="section" id="cryptography">
+<h3>Cryptography<a class="headerlink" href="#cryptography" title="Permalink to this heading"></a></h3>
+<p>The key and the IV used to decrypt the data are sent from the server
+after a successful login, forcing the user to bruteforce a key for
+every single file extension encrypted.</p>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
+<p>This algorithm was introduced in the 40k branch and its used until now
+(precise information is not confirmed)</p>
+</div>
+<div class="section" id="composition">
+<h2>Composition<a class="headerlink" href="#composition" title="Permalink to this heading"></a></h2>
+<p>The algorithm is divided in two parts:</p>
+<ul class="simple">
+<li><p>The extension keys</p></li>
+<li><p>The file cryptation</p></li>
+</ul>
+<div class="section" id="extension-keys">
+<h3>Extension Keys<a class="headerlink" href="#extension-keys" title="Permalink to this heading"></a></h3>
+<p>The extensions keys is a 16 byte key and 16 byte IV associated
+to an extension.
+The keys do not change based from the cryptation type used.</p>
+<p>The keys are randomly generated during the creation of an EterPack.</p>
+<p>An extension key is generated by performing the following actions:</p>
+<ul class="simple">
+<li><p>Calculate an hash of the extension (the extension is written in lowercase and does not contain the . before the extension)</p></li>
+<li><p>Generate two 16-byte values and associate them to the extension hash.</p></li>
+</ul>
+<p>The hash used is simply a 32-bit FNV-1a hash function with the offset_basis set as 0. Written here, a modified version of a MIT implementation found here:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// License: MIT</span>
+<span class="c1">// Famous 32 bits FNV-1a hash function by Glenn Fowler, Landon Curt Noll, and Phong Vo.</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="nf">fnv1a32</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">apStr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">hash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 32 bit offset_basis = 0</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">apStr</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">idx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// 32 bit FNV_prime = 224 + 28 + 0x93 = 16777619</span>
+<span class="w">        </span><span class="n">hash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">16777619U</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">hash</span><span class="p">)</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">static_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="p">(</span><span class="n">apStr</span><span class="p">[</span><span class="n">idx</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">hash</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="file-encryption">
+<h3>File Encryption<a class="headerlink" href="#file-encryption" title="Permalink to this heading"></a></h3>
+<p>A file is crypted with an unique key and IV generated from the
+extension key.
+Each file might be encrypted with a different cryptation type,
+as it’s chosen during the cryptation of the file.</p>
+<p>A file is encrypted by doing the following actions:</p>
+<ul class="simple">
+<li><p>Calculate a CRC32 of the filename (the filename will contain the extension and it’s all written in lower case)</p></li>
+<li><p>Select the algorithm to use for cryptation</p></li>
+<li><p>Get the extension key for the file</p></li>
+<li><p>Generate the IV and key used for the algorithm from the extension key</p></li>
+</ul>
+<p>The algorithm is chosen by doing the module of the filename crc with the
+encryption types (currently 3)</p>
+<p>The key and IV are simply the extension key and
+IV XORed with the CRC filename (every 4 bytes of the key/IV is XORed)</p>
+</div>
+<div class="section" id="known-encryption-types">
+<h3>Known encryption types<a class="headerlink" href="#known-encryption-types" title="Permalink to this heading"></a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Camellia
+Twofish
+XTEA
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Encryption" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="hybrid_cript_plus.html" class="btn btn-neutral float-right" title="HybridCrypt+ (Type 5)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2022.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

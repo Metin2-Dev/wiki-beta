@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DDS Texture Caching &mdash; Wiki  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/algolia.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/rtd_dark.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/js/external-hyperlinks.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Encrypted Object" href="../Encrypted-Object.html" />
+    <link rel="prev" title="Deprecated" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> Wiki
+            <img src="../../../../_static/128_icon.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Wiki</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Topics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../Encryption/index.html">Encryption</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Encryption/hybrid_cript.html">HybridCrypt (Type 4)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Encryption/hybrid_cript.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Encryption/hybrid_cript.html#distinction">Distinction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Encryption/hybrid_cript.html#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Encryption/hybrid_cript.html#composition">Composition</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Encryption/hybrid_cript_plus.html">HybridCrypt+ (Type 5)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Encryption/hybrid_cript_plus.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Encryption/hybrid_cript_plus.html#distinction">Distinction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Encryption/hybrid_cript_plus.html#composition">Composition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Formats</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Map/index.html">Map</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Map/Chunk/index.html">Chunk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Map/index.html#directory-composition">Directory Composition</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Scripts/index.html">Script</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Scripts/Base.html">Script Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Scripts/Property.html">Property</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Scripts/Sub.html">Sub Format (.sub)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Entity/index.html">Entity</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Entity/Models/index.html">Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Entity/Motion.html">Motion Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Entity/Effect.html">Effect Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Entity/Sound.html">Sound Data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Pack/index.html">Pack</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Pack/eter.html">EterPack</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Protos/index.html">Protos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Protos/Item.html">Item Proto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Protos/Mob.html">Mob Proto</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Deprecated</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">DDS Texture Caching</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Encrypted-Object.html">Encrypted Object</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Encrypted-Object.html#header">Header</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Encrypted-Object.html#data-compression">Data Compression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Encrypted-Object.html#data-encryption">Data Encryption</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Networking/index.html">Networking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Networking/Flow.html">Flow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Networking/Flow.html#concept">Concept</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Networking/Phases.html">Phases</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Networking/Phases.html#login-phase">Login Phase</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Networking/Synchronization/index.html">Synchronization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Networking/Synchronization/Handshake.html">Handshake</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Networking/Synchronization/IPE.html">IPE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Networking/Data/index.html">Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Networking/Data/Packets/index.html">Packets</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Networking/Encryption/index.html">Encryption</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Networking/Encryption/Overview.html">Encryption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Networking/Encryption/Encryption.html">Network Encryption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Networking/Encryption/IPE.html">IPE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Networking/Encryption/XTEA.html">XTEA</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Knowledge/index.html">Knowledge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Knowledge/Compatibility/index.html">Compatibility</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Knowledge/Compatibility/improvements.html">Possible Improvements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Knowledge/Compatibility/improvements.html#id1"></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Knowledge/Compatibility/index.html#compatible-platforms">Compatible Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Knowledge/Compatibility/index.html#client">Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Knowledge/Compatibility/index.html#server">Server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Knowledge/Compatibility/index.html#freebsd">FreeBSD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Knowledge/Compatibility/index.html#bsd-extensions-file-monitoring">BSD Extensions/File Monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Knowledge/Compatibility/index.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Knowledge/Tutorials/index.html">Tutorials</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Knowledge/ThirdParty/index.html">Third Party</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Knowledge/ThirdParty/Requirements.html">Tutorial</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Knowledge/ThirdParty/Requirements.html#introduction">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Knowledge/ThirdParty/libraries.html">Third Party Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Knowledge/ThirdParty/libraries.html#introduction">Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Knowledge/ThirdParty/libraries.html#client">Client</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Knowledge/ThirdParty/libraries.html#server">Server</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Knowledge/ThirdParty/dependencies.html">Dependencies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Knowledge/ThirdParty/dependencies.html#client-binary">Client Binary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Knowledge/ThirdParty/dependencies.html#directx-8-and-windows-32bit-native-apis">DirectX 8 and Windows 32bit native APIs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../History/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../History/Network.html">Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../History/Network.html#encryption">Encryption</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../History/Network.html#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../About/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../About/Contributing.html">Contributing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../About/Contributing.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../About/Contributing.html#content">Content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../About/Contributing.html#proposing-changes">Proposing Changes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../About/Contributing.html#pull-requests-approval">Pull Requests / Approval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../About/Contributing.html#licensing">Licensing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Topics</a> &raquo;</li>
+          <li><a href="../index.html">Formats</a> &raquo;</li>
+          <li><a href="index.html">Deprecated</a> &raquo;</li>
+      <li>DDS Texture Caching</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/RewardMetin2/Wiki/blob/master/docs/pages/Topics/Formats/Deprecated/texture_caching.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="dds-texture-caching">
+<h1>DDS Texture Caching<a class="headerlink" href="#dds-texture-caching" title="Permalink to this heading"></a></h1>
+<p>The texture caching was an old method used by the old
+Metin2 auto-patcher to reduce download time of big texture files.</p>
+<p>The auto-patcher would download RDCH files and after being
+downloaded, it would read the file and generate
+a new <a class="reference internal" href="../Pack/eter.html"><span class="doc std std-doc">EterPack</span></a> file
+named with the RCDH filename followed by <code class="docutils literal notranslate"><span class="pre">_texcache</span></code>, to signalize that
+this texture cache was generated by the patcher.</p>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
+<p>Its introduction date is unknown however its estimated that
+the format was used in the Korean auto-patcher around 2013,
+and then dropped later at an unknown date
+(this is a rough estimation that is not precisely confirmed)</p>
+</div>
+<div class="section" id="rdch-format">
+<h2>RDCH Format<a class="headerlink" href="#rdch-format" title="Permalink to this heading"></a></h2>
+<div class="section" id="header">
+<h3>Header<a class="headerlink" href="#header" title="Permalink to this heading"></a></h3>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Bytes</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Texture count</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dds-texture">
+<h3>DDS texture<a class="headerlink" href="#dds-texture" title="Permalink to this heading"></a></h3>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Bytes</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Texture size</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>Mipmap count</p></td>
+</tr>
+<tr class="row-even"><td><p>?</p></td>
+<td><p>File Name</p></td>
+</tr>
+<tr class="row-odd"><td><p>?</p></td>
+<td><p>Texture data</p></td>
+</tr>
+</tbody>
+</table>
+<p>Then, each texture cached is contained inside, at least 8 bytes per texture.</p>
+<p>First 4 bytes: Length of the cached texture (The name is a file contained inside the corrisponding EterPack)</p>
+<p>Next 4 bytes: Mipmap count</p>
+<p>Then it follows the name of the file without a null terminator.</p>
+<p>Last, the DDS texture for each mipmap compressed.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Deprecated" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Encrypted-Object.html" class="btn btn-neutral float-right" title="Encrypted Object" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2022.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Item Proto &mdash; Wiki  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/algolia.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/rtd_dark.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/js/external-hyperlinks.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Mob Proto" href="Mob.html" />
+    <link rel="prev" title="Protos" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> Wiki
+            <img src="../../../../_static/128_icon.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Wiki</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Topics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../Encryption/index.html">Encryption</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Encryption/hybrid_cript.html">HybridCrypt (Type 4)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Encryption/hybrid_cript.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Encryption/hybrid_cript.html#distinction">Distinction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Encryption/hybrid_cript.html#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Encryption/hybrid_cript.html#composition">Composition</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Encryption/hybrid_cript_plus.html">HybridCrypt+ (Type 5)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Encryption/hybrid_cript_plus.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Encryption/hybrid_cript_plus.html#distinction">Distinction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Encryption/hybrid_cript_plus.html#composition">Composition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Formats</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Map/index.html">Map</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Map/Chunk/index.html">Chunk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Map/index.html#directory-composition">Directory Composition</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Scripts/index.html">Script</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Scripts/Base.html">Script Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Scripts/Property.html">Property</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Scripts/Sub.html">Sub Format (.sub)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Entity/index.html">Entity</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Entity/Models/index.html">Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Entity/Motion.html">Motion Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Entity/Effect.html">Effect Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Entity/Sound.html">Sound Data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Pack/index.html">Pack</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Pack/eter.html">EterPack</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Protos</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Item Proto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mob.html">Mob Proto</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Deprecated/index.html">Deprecated</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Deprecated/texture_caching.html">DDS Texture Caching</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Encrypted-Object.html">Encrypted Object</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Encrypted-Object.html#header">Header</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Encrypted-Object.html#data-compression">Data Compression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Encrypted-Object.html#data-encryption">Data Encryption</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Networking/index.html">Networking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Networking/Flow.html">Flow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Networking/Flow.html#concept">Concept</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Networking/Phases.html">Phases</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Networking/Phases.html#login-phase">Login Phase</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Networking/Synchronization/index.html">Synchronization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Networking/Synchronization/Handshake.html">Handshake</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Networking/Synchronization/IPE.html">IPE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Networking/Data/index.html">Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Networking/Data/Packets/index.html">Packets</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Networking/Encryption/index.html">Encryption</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Networking/Encryption/Overview.html">Encryption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Networking/Encryption/Encryption.html">Network Encryption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Networking/Encryption/IPE.html">IPE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Networking/Encryption/XTEA.html">XTEA</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Knowledge/index.html">Knowledge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Knowledge/Compatibility/index.html">Compatibility</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Knowledge/Compatibility/improvements.html">Possible Improvements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Knowledge/Compatibility/improvements.html#id1"></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Knowledge/Compatibility/index.html#compatible-platforms">Compatible Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Knowledge/Compatibility/index.html#client">Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Knowledge/Compatibility/index.html#server">Server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Knowledge/Compatibility/index.html#freebsd">FreeBSD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Knowledge/Compatibility/index.html#bsd-extensions-file-monitoring">BSD Extensions/File Monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Knowledge/Compatibility/index.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Knowledge/Tutorials/index.html">Tutorials</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Knowledge/ThirdParty/index.html">Third Party</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Knowledge/ThirdParty/Requirements.html">Tutorial</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Knowledge/ThirdParty/Requirements.html#introduction">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Knowledge/ThirdParty/libraries.html">Third Party Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Knowledge/ThirdParty/libraries.html#introduction">Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Knowledge/ThirdParty/libraries.html#client">Client</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Knowledge/ThirdParty/libraries.html#server">Server</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Knowledge/ThirdParty/dependencies.html">Dependencies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Knowledge/ThirdParty/dependencies.html#client-binary">Client Binary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Knowledge/ThirdParty/dependencies.html#directx-8-and-windows-32bit-native-apis">DirectX 8 and Windows 32bit native APIs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../History/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../History/Network.html">Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../History/Network.html#encryption">Encryption</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../History/Network.html#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../About/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../About/Contributing.html">Contributing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../About/Contributing.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../About/Contributing.html#content">Content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../About/Contributing.html#proposing-changes">Proposing Changes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../About/Contributing.html#pull-requests-approval">Pull Requests / Approval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../About/Contributing.html#licensing">Licensing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Topics</a> &raquo;</li>
+          <li><a href="../index.html">Formats</a> &raquo;</li>
+          <li><a href="index.html">Protos</a> &raquo;</li>
+      <li>Item Proto</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/RewardMetin2/Wiki/blob/master/docs/pages/Topics/Formats/Protos/Item.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="item-proto">
+<h1>Item Proto<a class="headerlink" href="#item-proto" title="Permalink to this heading"></a></h1>
+<p>The Item Proto is a crypted file that contains all informations
+about the items included in the game. This file is both present in the
+client and the server.</p>
+<p>In the server, this file is used to process all the item
+(such as when you equip an item, if you can actually equip it).</p>
+<p>In the client, this file is used to perform several client-side
+checks (in order to reduce the amount of data sent to the server)
+and what actually is displayed in the item information.</p>
+<p>The Item proto must be in one of this two formats, MIPX format or MIPT format.</p>
+<div class="section" id="deployment">
+<h2>Deployment<a class="headerlink" href="#deployment" title="Permalink to this heading"></a></h2>
+<p>Although the client is able to load a MIPT Item Proto (as references exists in the binary), no MIPT proto has ever been found.</p>
+</div>
+<div class="section" id="composition">
+<h2>Composition<a class="headerlink" href="#composition" title="Permalink to this heading"></a></h2>
+<div class="section" id="mipx-format">
+<h3>MIPX format<a class="headerlink" href="#mipx-format" title="Permalink to this heading"></a></h3>
+<div class="section" id="header-16-bytes">
+<h4>Header (16 bytes)<a class="headerlink" href="#header-16-bytes" title="Permalink to this heading"></a></h4>
+<p><img alt="MIPT Item Proto" src="../../../../_images/item_proto_mipx_header.png" /></p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Color</p></th>
+<th class="head"><p>Bytes</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span style="color:red">Red</span></p></td>
+<td><p>4</p></td>
+<td><p>FourCC (MIPT)</p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="color:royalblue">Blue</span></p></td>
+<td><p>4</p></td>
+<td><p>Version</p></td>
+</tr>
+<tr class="row-even"><td><p><span style="color:green">Green</span></p></td>
+<td><p>4</p></td>
+<td><p>Item table size</p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="color:orange">Orange</span></p></td>
+<td><p>4</p></td>
+<td><p>Amount of elements</p></td>
+</tr>
+<tr class="row-even"><td><p><span style="color:#666">Black</span></p></td>
+<td><p>4</p></td>
+<td><p>Size of Crypted Object</p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="color:gray">Gray</span></p></td>
+<td><p>4</p></td>
+<td><p>Offset of Crypted Object</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="mipt-format">
+<h3>MIPT format<a class="headerlink" href="#mipt-format" title="Permalink to this heading"></a></h3>
+<p>While references of this file format still exists in the
+executable, no public client that ships a MIPT proto has
+ever surfaced.</p>
+<p>It might have been used during development of Metin2 or in very old
+clients (like 2004 or 2003).</p>
+<p>The CryptedObject format is the same as a MIPX proto.</p>
+<div class="section" id="id1">
+<h4>Header (16 bytes)<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<p><img alt="MIPT Item Proto" src="../../../../_images/item_proto_mipt_header.png" /></p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Color</p></th>
+<th class="head"><p>Bytes</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span style="color:red">Red</span></p></td>
+<td><p>4</p></td>
+<td><p>FourCC (MIPT)</p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="color:royalblue">Blue</span></p></td>
+<td><p>4</p></td>
+<td><p>Amount of records</p></td>
+</tr>
+<tr class="row-even"><td><p><span style="color:gray">Gray</span></p></td>
+<td><p>4</p></td>
+<td><p>Size of Crypted Object</p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="color:orange">Orange</span></p></td>
+<td><p>4</p></td>
+<td><p>Crypted Object offset</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="item-table-163-bytes">
+<h4>Item table (163 bytes)<a class="headerlink" href="#item-table-163-bytes" title="Permalink to this heading"></a></h4>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Size (in bytes)</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id</p></td>
+<td><p>uint32</p></td>
+<td><p>4</p></td>
+<td><p>Number of the item (ie. Sword+0 = 10)</p></td>
+</tr>
+<tr class="row-odd"><td><p>range</p></td>
+<td><p>uint32</p></td>
+<td><p>4</p></td>
+<td><p>The range is used to associate a certain item id range to one item in the item proto table.</p></td>
+</tr>
+<tr class="row-even"><td><p>index_name</p></td>
+<td><p>char[25]</p></td>
+<td><p>25</p></td>
+<td><p>Internally used in the game (such as in parsing server side tables)</p></td>
+</tr>
+<tr class="row-odd"><td><p>locale_name</p></td>
+<td><p>char[25]</p></td>
+<td><p>25</p></td>
+<td><p>Actual name displayed in the client or in quests</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p>uint8</p></td>
+<td><p>1</p></td>
+<td><p>Type of the item, see List of known Item types</p></td>
+</tr>
+<tr class="row-odd"><td><p>subtype</p></td>
+<td><p>uint8</p></td>
+<td><p>1</p></td>
+<td><p>Extra information which tells the item what it is based from the item type, see List of known Item types</p></td>
+</tr>
+<tr class="row-even"><td><p>weight</p></td>
+<td><p>uint8</p></td>
+<td><p>1</p></td>
+<td><p>Unused</p></td>
+</tr>
+<tr class="row-odd"><td><p>size</p></td>
+<td><p>uint8</p></td>
+<td><p>1</p></td>
+<td><p>How many cells does the item take</p></td>
+</tr>
+<tr class="row-even"><td><p>anti_flags</p></td>
+<td><p>uint32</p></td>
+<td><p>4</p></td>
+<td><p>Bitflag that defines what you can’t do without the item, see List of known Item flags</p></td>
+</tr>
+<tr class="row-odd"><td><p>flags</p></td>
+<td><p>uint32</p></td>
+<td><p>4</p></td>
+<td><p>Bitflag that defines extra informations in what the item can be used for, see List of known Item flags</p></td>
+</tr>
+<tr class="row-even"><td><p>wear_flags</p></td>
+<td><p>uint32</p></td>
+<td><p>4</p></td>
+<td><p>Bitflag that defines where you can equip the item, see List of known Item flags</p></td>
+</tr>
+<tr class="row-odd"><td><p>immune_flags</p></td>
+<td><p>uint32</p></td>
+<td><p>4</p></td>
+<td><p>Unused</p></td>
+</tr>
+<tr class="row-even"><td><p>buy_price</p></td>
+<td><p>uint32</p></td>
+<td><p>4</p></td>
+<td><p>Price that you can buy the item</p></td>
+</tr>
+<tr class="row-odd"><td><p>sell_price</p></td>
+<td><p>uint32</p></td>
+<td><p>4</p></td>
+<td><p>Price that you can sell the item</p></td>
+</tr>
+<tr class="row-even"><td><p>limits</p></td>
+<td><p>Limit[2]</p></td>
+<td><p>?</p></td>
+<td><p>Limits certain usage of the item (Time expire for example)</p></td>
+</tr>
+<tr class="row-odd"><td><p>applies</p></td>
+<td><p>Apply[2]</p></td>
+<td><p>?</p></td>
+<td><p>Standard bonuses that the item have</p></td>
+</tr>
+<tr class="row-even"><td><p>values</p></td>
+<td><p>int32[6]</p></td>
+<td><p>?</p></td>
+<td><p>The usage of values vary from the type of item</p></td>
+</tr>
+<tr class="row-odd"><td><p>sockets</p></td>
+<td><p>int32[3]</p></td>
+<td><p>?</p></td>
+<td><p>The usage of sockets vary from the type of item</p></td>
+</tr>
+<tr class="row-even"><td><p>refine_item_id</p></td>
+<td><p>uint32</p></td>
+<td><p>4</p></td>
+<td><p>ID of the item that will evolve once it’s refined (example: from Sword+0 to Sword+1, refineditemid will be 11)</p></td>
+</tr>
+<tr class="row-odd"><td><p>refine_set</p></td>
+<td><p>uint16</p></td>
+<td><p>2</p></td>
+<td><p>Unused</p></td>
+</tr>
+<tr class="row-even"><td><p>alter_magic_value</p></td>
+<td><p>uint8</p></td>
+<td><p>1</p></td>
+<td><p>Unused</p></td>
+</tr>
+<tr class="row-odd"><td><p>specular</p></td>
+<td><p>uint8</p></td>
+<td><p>1</p></td>
+<td><p>Sets the intensity of how the item will shine (The effect that +9 weapons have)</p></td>
+</tr>
+<tr class="row-even"><td><p>alter_socket_percentage</p></td>
+<td><p>uint8</p></td>
+<td><p>1</p></td>
+<td><p>Unused</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="limit-applies">
+<h5>Limit / Applies<a class="headerlink" href="#limit-applies" title="Permalink to this heading"></a></h5>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Size (in bytes)</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>type</p></td>
+<td><p>uint8</p></td>
+<td><p>1</p></td>
+<td><p>Attribute number</p></td>
+</tr>
+<tr class="row-odd"><td><p>value</p></td>
+<td><p>uint32</p></td>
+<td><p>4</p></td>
+<td><p>Attribute value</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Protos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Mob.html" class="btn btn-neutral float-right" title="Mob Proto" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2022.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
