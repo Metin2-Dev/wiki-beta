@@ -24,9 +24,14 @@ jobs:
       with:
         command: run build
 
+    - name: Checkout gh-pages branch
+      uses: actions/checkout@v3
+      with:
+        repository: Metin2Dev/wiki-beta-dev
+        ref: gh-pages
+
     - name: Commit documentation changes
       run: |
-        git clone ${{ github.head_ref }} --branch gh-pages --single-branch gh-pages
         cp -r _build/html/* gh-pages/
         cd gh-pages
         git config --local user.email "action@github.com"
