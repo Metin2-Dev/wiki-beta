@@ -21,3 +21,7 @@ help:
 
 clean: 
 	rm -rf $(BUILDDIR)
+
+open:
+	python open.py
+

@@ -10,20 +10,6 @@ Welcome to the Metin2 Wiki
    pages/Topics/index
    pages/Knowledge/index
 
-.. toctree::
-   :maxdepth: 1
-   :caption: History
-   :name: root-toc-history
-   :hidden:
-
-   pages/History/index
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Knowledge
-   :name: root-toc-knowledge
-   :hidden:
-
 
 .. toctree::
    :maxdepth: 1
@@ -31,6 +17,7 @@ Welcome to the Metin2 Wiki
    :name: root-toc-about
    :hidden:
 
+   pages/Maintenance/index
    pages/About/index
 
 
@@ -43,4 +30,8 @@ no variations made by unofficial origins.
 The wiki is open for contributions, read the guidelines in
 :doc:`/pages/About/Contributing`
 
+
+.. image:: https://raw.githubusercontent.com/Metin2-Dev/Assets/main/128_round_black.png
+    :align: center
+    :alt: Metin2Dev Team
 

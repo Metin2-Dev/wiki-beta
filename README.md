@@ -36,8 +36,8 @@ of content, for stable and latest content check the
  - Or by doing `cd docs/` and typing `make html`
  - Whenever you need to clean type `make clean`
 
-**Note:** If you don't have `make` on Windows, you can
-do `make.bat` instead
+**Note:** If you don't have `make` on Windows, you can use 
+`make.bat` instead
 
 
 ## Previewing

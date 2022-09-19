@@ -60,7 +60,7 @@ html_context = {
     'github_version': 'beta/docs/',
 }
 
-html_logo = "_static/img/logos/128_icon.png"
+html_logo = "https://raw.githubusercontent.com/Metin2-Dev/Assets/main/128_round_black.png"
 
 html_theme_options = {
     'logo_only': False,
@@ -73,7 +73,6 @@ html_css_files = [
     'css/custom.css',
     'css/algolia.css',
     'https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css',
-    'css/rtd_dark.css'
 ]
 
 # Javascript files
@@ -99,5 +98,5 @@ pygments_style = "vs"
 surpress_warnings = ['autosectionlabel.*']
 
 # Edit on GitHub configuration
-edit_on_github_project = 'username/reponame'
-edit_on_github_branch = 'master'
+edit_on_github_project = 'Metin2-Dev/wiki-beta-dev'
+edit_on_github_branch = 'development'
