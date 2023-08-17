@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Encrypted Object &mdash; Wiki  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -13,11 +14,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
         <script src="../../../_static/js/external-hyperlinks.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -31,12 +32,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../index.html" class="icon icon-home"> Wiki
-            <img src="https://raw.githubusercontent.com/Metin2-Dev/Assets/main/128_round_black.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Wiki
+              <img src="https://raw.githubusercontent.com/Metin2-Dev/Assets/main/128_round_black.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -161,10 +166,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../index.html">Topics</a> &raquo;</li>
-          <li><a href="index.html">Formats</a> &raquo;</li>
-      <li>Encrypted Object</li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Topics</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Formats</a></li>
+      <li class="breadcrumb-item active">Encrypted Object</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/Metin2-Dev/wiki-beta-dev/blob/beta/docs/pages/Topics/Formats/Encrypted-Object.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -174,7 +179,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="encrypted-object">
+  <section id="encrypted-object">
 <h1>Encrypted Object<a class="headerlink" href="#encrypted-object" title="Permalink to this heading"></a></h1>
 <p>An encrypted object is an internal file format used to encrypt and compress
 any raw file data</p>
@@ -189,10 +194,10 @@ any raw file data</p>
 (either encrypted or compressed)</p>
 <p>A Kaitai structure file for reading the format is available
 <a class="reference external" href="https://metin2.dev/bin/?f3421ddb59ca59b1#6vPviQ8fcQn5gtALBfeqFoxA82w9tAScZbXVbziM45mF">here</a></p>
-<div class="section" id="header">
+<section id="header">
 <h2>Header<a class="headerlink" href="#header" title="Permalink to this heading"></a></h2>
 <p><img alt="Encrypted Object" src="../../../_images/encrypted_object_header.png" /></p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Color</p></th>
 <th class="head"><p>Bytes</p></th>
@@ -222,14 +227,14 @@ any raw file data</p>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="data-compression">
+</section>
+<section id="data-compression">
 <h2>Data Compression<a class="headerlink" href="#data-compression" title="Permalink to this heading"></a></h2>
 <p>The data is compressed by with one of the following algorithms
 depending on which Magic code is specified</p>
-<div class="section" id="known-compression-algorithms">
+<section id="known-compression-algorithms">
 <h3>Known Compression Algorithms<a class="headerlink" href="#known-compression-algorithms" title="Permalink to this heading"></a></h3>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Magic Code</p></th>
 <th class="head"><p>Algorithm</p></th>
@@ -244,13 +249,13 @@ depending on which Magic code is specified</p>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="data-encryption">
+</section>
+</section>
+<section id="data-encryption">
 <h2>Data Encryption<a class="headerlink" href="#data-encryption" title="Permalink to this heading"></a></h2>
 <p>The data is encrypted with the XTEA algorithm, so to decrypt it
 is required a specific key for decrypting, a list of known keys follows below</p>
-<div class="section" id="knowing-if-the-data-is-encrypted">
+<section id="knowing-if-the-data-is-encrypted">
 <h3>Knowing if the data is encrypted<a class="headerlink" href="#knowing-if-the-data-is-encrypted" title="Permalink to this heading"></a></h3>
 <p>If the bytes in <span style="color:royalblue">Blue</span> are &gt;= 0
 and the bytes in <span style="color:red">Red</span> are different from
@@ -259,10 +264,10 @@ then the data is encrypted, meaning the bytes in <span style="color:grey">Black<
 correspond to the Magic used to check if XTEA decryption was successful</p>
 <p>Otherwise, the bytes in <span style="color:grey">Black</span> will be
 equal to the bytes in <span style="color:red">Red</span></p>
-</div>
-<div class="section" id="known-xtea-keys">
+</section>
+<section id="known-xtea-keys">
 <h3>Known XTEA keys<a class="headerlink" href="#known-xtea-keys" title="Permalink to this heading"></a></h3>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Used In</p></th>
 <th class="head"><p>Key (16 bytes)</p></th>
@@ -283,9 +288,9 @@ equal to the bytes in <span style="color:red">Red</span></p>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -298,7 +303,7 @@ equal to the bytes in <span style="color:red">Red</span></p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2018-2022.</p>
+    <p>&#169; Copyright 2018-2023.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

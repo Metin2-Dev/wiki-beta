@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HybridCrypt (Type 4) &mdash; Wiki  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -13,11 +14,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
         <script src="../../../_static/js/external-hyperlinks.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -31,12 +32,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../index.html" class="icon icon-home"> Wiki
-            <img src="https://raw.githubusercontent.com/Metin2-Dev/Assets/main/128_round_black.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Wiki
+              <img src="https://raw.githubusercontent.com/Metin2-Dev/Assets/main/128_round_black.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -161,10 +166,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../index.html">Topics</a> &raquo;</li>
-          <li><a href="index.html">Encryption</a> &raquo;</li>
-      <li>HybridCrypt (Type 4)</li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Topics</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Encryption</a></li>
+      <li class="breadcrumb-item active">HybridCrypt (Type 4)</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/Metin2-Dev/wiki-beta-dev/blob/beta/docs/pages/Topics/Encryption/hybrid_cript.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -174,41 +179,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="hybridcrypt-type-4">
+  <section id="hybridcrypt-type-4">
 <h1>HybridCrypt (Type 4)<a class="headerlink" href="#hybridcrypt-type-4" title="Permalink to this heading"></a></h1>
-<div class="section" id="summary">
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading"></a></h2>
-</div>
-<div class="section" id="distinction">
+</section>
+<section id="distinction">
 <h2>Distinction<a class="headerlink" href="#distinction" title="Permalink to this heading"></a></h2>
 <p>What makes this algorithm type explicitly considered more secure
 compared to other types are the two key factors below</p>
-<div class="section" id="usability">
+<section id="usability">
 <h3>Usability<a class="headerlink" href="#usability" title="Permalink to this heading"></a></h3>
 <p>The algorithm that is used changes from the file name,
 this means that new algorithms can be used and implement in
 newer versions</p>
-</div>
-<div class="section" id="cryptography">
+</section>
+<section id="cryptography">
 <h3>Cryptography<a class="headerlink" href="#cryptography" title="Permalink to this heading"></a></h3>
 <p>The key and the IV used to decrypt the data are sent from the server
 after a successful login, forcing the user to bruteforce a key for
 every single file extension encrypted.</p>
-</div>
-</div>
-<div class="section" id="usage">
+</section>
+</section>
+<section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
 <p>This algorithm was introduced in the 40k branch and its used until now
 (precise information is not confirmed)</p>
-</div>
-<div class="section" id="composition">
+</section>
+<section id="composition">
 <h2>Composition<a class="headerlink" href="#composition" title="Permalink to this heading"></a></h2>
 <p>The algorithm is divided in two parts:</p>
 <ul class="simple">
 <li><p>The extension keys</p></li>
 <li><p>The file cryptation</p></li>
 </ul>
-<div class="section" id="extension-keys">
+<section id="extension-keys">
 <h3>Extension Keys<a class="headerlink" href="#extension-keys" title="Permalink to this heading"></a></h3>
 <p>The extensions keys is a 16 byte key and 16 byte IV associated
 to an extension.
@@ -222,20 +227,20 @@ The keys do not change based from the cryptation type used.</p>
 <p>The hash used is simply a 32-bit FNV-1a hash function with the offset_basis set as 0. Written here, a modified version of a MIT implementation found here:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// License: MIT</span>
 <span class="c1">// Famous 32 bits FNV-1a hash function by Glenn Fowler, Landon Curt Noll, and Phong Vo.</span>
-<span class="kt">uint32_t</span><span class="w"> </span><span class="nf">fnv1a32</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">apStr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="nf">fnv1a32</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">apStr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">hash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 32 bit offset_basis = 0</span>
 
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">apStr</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">idx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">apStr</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">idx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// 32 bit FNV_prime = 224 + 28 + 0x93 = 16777619</span>
-<span class="w">        </span><span class="n">hash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">16777619U</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">hash</span><span class="p">)</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">static_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="p">(</span><span class="n">apStr</span><span class="p">[</span><span class="n">idx</span><span class="p">]);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="n">hash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">16777619U</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">hash</span><span class="p">)</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">static_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="p">(</span><span class="n">apStr</span><span class="p">[</span><span class="n">idx</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">hash</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">hash</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="file-encryption">
+</section>
+<section id="file-encryption">
 <h3>File Encryption<a class="headerlink" href="#file-encryption" title="Permalink to this heading"></a></h3>
 <p>A file is crypted with an unique key and IV generated from the
 extension key.
@@ -252,17 +257,17 @@ as it’s chosen during the cryptation of the file.</p>
 encryption types (currently 3)</p>
 <p>The key and IV are simply the extension key and
 IV XORed with the CRC filename (every 4 bytes of the key/IV is XORed)</p>
-</div>
-<div class="section" id="known-encryption-types">
+</section>
+<section id="known-encryption-types">
 <h3>Known encryption types<a class="headerlink" href="#known-encryption-types" title="Permalink to this heading"></a></h3>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Camellia
 Twofish
 XTEA
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -275,7 +280,7 @@ XTEA
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2018-2022.</p>
+    <p>&#169; Copyright 2018-2023.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

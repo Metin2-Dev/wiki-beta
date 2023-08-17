@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Item Proto &mdash; Wiki  documentation</title>
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
@@ -13,11 +14,11 @@
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
         <script src="../../../../_static/jquery.js"></script>
-        <script src="../../../../_static/underscore.js"></script>
         <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
         <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
         <script src="../../../../_static/js/external-hyperlinks.js"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
@@ -31,12 +32,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../../index.html" class="icon icon-home"> Wiki
-            <img src="https://raw.githubusercontent.com/Metin2-Dev/Assets/main/128_round_black.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Wiki
+              <img src="https://raw.githubusercontent.com/Metin2-Dev/Assets/main/128_round_black.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -161,11 +166,11 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../index.html">Topics</a> &raquo;</li>
-          <li><a href="../index.html">Formats</a> &raquo;</li>
-          <li><a href="index.html">Protos</a> &raquo;</li>
-      <li>Item Proto</li>
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Topics</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Formats</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Protos</a></li>
+      <li class="breadcrumb-item active">Item Proto</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/Metin2-Dev/wiki-beta-dev/blob/beta/docs/pages/Topics/Formats/Protos/Item.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -175,7 +180,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="item-proto">
+  <section id="item-proto">
 <h1>Item Proto<a class="headerlink" href="#item-proto" title="Permalink to this heading"></a></h1>
 <p>The Item Proto is a crypted file that contains all informations
 about the items included in the game. This file is both present in the
@@ -186,18 +191,18 @@ client and the server.</p>
 checks (in order to reduce the amount of data sent to the server)
 and what actually is displayed in the item information.</p>
 <p>The Item proto must be in one of this two formats, MIPX format or MIPT format.</p>
-<div class="section" id="deployment">
+<section id="deployment">
 <h2>Deployment<a class="headerlink" href="#deployment" title="Permalink to this heading"></a></h2>
 <p>Although the client is able to load a MIPT Item Proto (as references exists in the binary), no MIPT proto has ever been found.</p>
-</div>
-<div class="section" id="composition">
+</section>
+<section id="composition">
 <h2>Composition<a class="headerlink" href="#composition" title="Permalink to this heading"></a></h2>
-<div class="section" id="mipx-format">
+<section id="mipx-format">
 <h3>MIPX format<a class="headerlink" href="#mipx-format" title="Permalink to this heading"></a></h3>
-<div class="section" id="header-16-bytes">
+<section id="header-16-bytes">
 <h4>Header (16 bytes)<a class="headerlink" href="#header-16-bytes" title="Permalink to this heading"></a></h4>
 <p><img alt="MIPT Item Proto" src="../../../../_images/item_proto_mipx_header.png" /></p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Color</p></th>
 <th class="head"><p>Bytes</p></th>
@@ -231,9 +236,9 @@ and what actually is displayed in the item information.</p>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="mipt-format">
+</section>
+</section>
+<section id="mipt-format">
 <h3>MIPT format<a class="headerlink" href="#mipt-format" title="Permalink to this heading"></a></h3>
 <p>While references of this file format still exists in the
 executable, no public client that ships a MIPT proto has
@@ -241,10 +246,10 @@ ever surfaced.</p>
 <p>It might have been used during development of Metin2 or in very old
 clients (like 2004 or 2003).</p>
 <p>The CryptedObject format is the same as a MIPX proto.</p>
-<div class="section" id="id1">
+<section id="id1">
 <h4>Header (16 bytes)<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
 <p><img alt="MIPT Item Proto" src="../../../../_images/item_proto_mipt_header.png" /></p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Color</p></th>
 <th class="head"><p>Bytes</p></th>
@@ -270,10 +275,10 @@ clients (like 2004 or 2003).</p>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="item-table-163-bytes">
+</section>
+<section id="item-table-163-bytes">
 <h4>Item table (163 bytes)<a class="headerlink" href="#item-table-163-bytes" title="Permalink to this heading"></a></h4>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
 <th class="head"><p>Type</p></th>
@@ -399,9 +404,9 @@ clients (like 2004 or 2003).</p>
 </tr>
 </tbody>
 </table>
-<div class="section" id="limit-applies">
+<section id="limit-applies">
 <h5>Limit / Applies<a class="headerlink" href="#limit-applies" title="Permalink to this heading"></a></h5>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
 <th class="head"><p>Type</p></th>
@@ -422,11 +427,11 @@ clients (like 2004 or 2003).</p>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -439,7 +444,7 @@ clients (like 2004 or 2003).</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2018-2022.</p>
+    <p>&#169; Copyright 2018-2023.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

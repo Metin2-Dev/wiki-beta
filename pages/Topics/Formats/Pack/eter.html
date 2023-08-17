@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EterPack &mdash; Wiki  documentation</title>
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
@@ -13,11 +14,11 @@
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
         <script src="../../../../_static/jquery.js"></script>
-        <script src="../../../../_static/underscore.js"></script>
         <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
         <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
         <script src="../../../../_static/js/external-hyperlinks.js"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
@@ -31,12 +32,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../../index.html" class="icon icon-home"> Wiki
-            <img src="https://raw.githubusercontent.com/Metin2-Dev/Assets/main/128_round_black.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Wiki
+              <img src="https://raw.githubusercontent.com/Metin2-Dev/Assets/main/128_round_black.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -161,11 +166,11 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../index.html">Topics</a> &raquo;</li>
-          <li><a href="../index.html">Formats</a> &raquo;</li>
-          <li><a href="index.html">Pack</a> &raquo;</li>
-      <li>EterPack</li>
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Topics</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Formats</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Pack</a></li>
+      <li class="breadcrumb-item active">EterPack</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/Metin2-Dev/wiki-beta-dev/blob/beta/docs/pages/Topics/Formats/Pack/eter.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -175,7 +180,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="eterpack">
+  <section id="eterpack">
 <h1>EterPack<a class="headerlink" href="#eterpack" title="Permalink to this heading"></a></h1>
 <p>The EterPack is a proprietary Virtual File System used for containing all the Client assets
 (such as 3d meshes, sfx, textures).</p>
@@ -188,14 +193,14 @@ where it should virtually mapped)</p>
 <p>Index files are usually encrypted as a Crypted Object, therefore before
 reading the header, the client must decrypt the file following
 the method described in the Crypted Object page.</p>
-<div class="section" id="formats">
+<section id="formats">
 <h2>Formats<a class="headerlink" href="#formats" title="Permalink to this heading"></a></h2>
-<div class="section" id="index-eix-extension">
+<section id="index-eix-extension">
 <h3>Index (.eix extension)<a class="headerlink" href="#index-eix-extension" title="Permalink to this heading"></a></h3>
 <p><img alt="Index file" src="../../../../_images/Indexfile_header.png" /></p>
-<div class="section" id="header-16-bytes">
+<section id="header-16-bytes">
 <h4>Header ( 16 bytes )<a class="headerlink" href="#header-16-bytes" title="Permalink to this heading"></a></h4>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Color</p></th>
 <th class="head"><p>Bytes</p></th>
@@ -222,11 +227,11 @@ the method described in the Crypted Object page.</p>
 </tbody>
 </table>
 <p>From the number of files included in this EterPack, it follows one or more “Index File Information” or simply File information.</p>
-</div>
-<div class="section" id="file-information-193-bytes">
+</section>
+<section id="file-information-193-bytes">
 <h4>File Information ( 193 bytes )<a class="headerlink" href="#file-information-193-bytes" title="Permalink to this heading"></a></h4>
 <p><img alt="Index FIle" src="../../../../_images/Indexfile_finfo.png" /></p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Color</p></th>
 <th class="head"><p>Bytes</p></th>
@@ -276,17 +281,17 @@ the method described in the Crypted Object page.</p>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="content-epk-extension">
+</section>
+</section>
+<section id="content-epk-extension">
 <h3>Content (.epk extension)<a class="headerlink" href="#content-epk-extension" title="Permalink to this heading"></a></h3>
 <p>A Content file (.epk) contains the data encrypted by the specified
 algorithm type, there is no header or any format in this file,
 they are raw files which can be mapped by information that comes
 from the Index information specified above</p>
-<div class="section" id="algorithm-types">
+<section id="algorithm-types">
 <h4>Algorithm Types<a class="headerlink" href="#algorithm-types" title="Permalink to this heading"></a></h4>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Type</p></th>
 <th class="head"><p>Name</p></th>
@@ -311,11 +316,11 @@ from the Index information specified above</p>
 <td><p>Encrypted with Panama</p></td>
 </tr>
 <tr class="row-even"><td><p>4</p></td>
-<td><p><a class="reference internal" href="../../Encryption/hybrid_cript.html"><span class="doc std std-doc">HybridCrypt</span></a></p></td>
+<td><p><a class="reference internal" href="../../Encryption/hybrid_cript.html"><span class="std std-doc">HybridCrypt</span></a></p></td>
 <td><p>HybridCrypt</p></td>
 </tr>
 <tr class="row-odd"><td><p>5</p></td>
-<td><p><a class="reference internal" href="../../Encryption/hybrid_cript_plus.html"><span class="doc std std-doc">HybridCrypt+</span></a></p></td>
+<td><p><a class="reference internal" href="../../Encryption/hybrid_cript_plus.html"><span class="std std-doc">HybridCrypt+</span></a></p></td>
 <td><p>HybridCrypt with extra data</p></td>
 </tr>
 <tr class="row-even"><td><p>6</p></td>
@@ -324,16 +329,16 @@ from the Index information specified above</p>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-</div>
-<div class="section" id="deployment">
+</section>
+</section>
+</section>
+<section id="deployment">
 <h2>Deployment<a class="headerlink" href="#deployment" title="Permalink to this heading"></a></h2>
 <p>All the packs are stored inside the pack/ folder of the
 game client, and they are loaded in a specified order defined by
 the Pack <code class="docutils literal notranslate"><span class="pre">Index</span></code> that’s also present in that same folder</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -346,7 +351,7 @@ the Pack <code class="docutils literal notranslate"><span class="pre">Index</spa
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2018-2022.</p>
+    <p>&#169; Copyright 2018-2023.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

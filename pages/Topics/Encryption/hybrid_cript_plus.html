@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HybridCrypt+ (Type 5) &mdash; Wiki  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -13,11 +14,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
         <script src="../../../_static/js/external-hyperlinks.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -31,12 +32,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../index.html" class="icon icon-home"> Wiki
-            <img src="https://raw.githubusercontent.com/Metin2-Dev/Assets/main/128_round_black.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Wiki
+              <img src="https://raw.githubusercontent.com/Metin2-Dev/Assets/main/128_round_black.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -161,10 +166,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../index.html">Topics</a> &raquo;</li>
-          <li><a href="index.html">Encryption</a> &raquo;</li>
-      <li>HybridCrypt+ (Type 5)</li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Topics</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Encryption</a></li>
+      <li class="breadcrumb-item active">HybridCrypt+ (Type 5)</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/Metin2-Dev/wiki-beta-dev/blob/beta/docs/pages/Topics/Encryption/hybrid_cript_plus.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -174,25 +179,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="hybridcrypt-type-5">
+  <section id="hybridcrypt-type-5">
 <h1>HybridCrypt+ (Type 5)<a class="headerlink" href="#hybridcrypt-type-5" title="Permalink to this heading"></a></h1>
-<div class="section" id="summary">
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading"></a></h2>
-<p>This algorithm is based on <a class="reference internal" href="hybrid_cript.html"><span class="doc std std-doc">HybridCrypt</span></a></p>
-</div>
-<div class="section" id="distinction">
+<p>This algorithm is based on <a class="reference internal" href="hybrid_cript.html"><span class="std std-doc">HybridCrypt</span></a></p>
+</section>
+<section id="distinction">
 <h2>Distinction<a class="headerlink" href="#distinction" title="Permalink to this heading"></a></h2>
 <p>A portion of the file to be encrypted/decrypted is sliced
 and stored in the server</p>
 <p>This ensures that it’s impossible to fully retrieve the content of
 a file without making a valid request to the server, despite being
 more consuming in terms of bandwidth.</p>
-</div>
-<div class="section" id="composition">
+</section>
+<section id="composition">
 <h2>Composition<a class="headerlink" href="#composition" title="Permalink to this heading"></a></h2>
 <p>The algorithm makes the sames procedures as its base only adding
 a slicing step</p>
-<div class="section" id="slicing">
+<section id="slicing">
 <h3>Slicing<a class="headerlink" href="#slicing" title="Permalink to this heading"></a></h3>
 <p>Before the base algorithm is performed, the file is sliced in two,
 the slice starts from the end of the file length to a range of
@@ -201,18 +206,18 @@ the slice starts from the end of the file length to a range of
 leaving the second part of the slice untouched.</p>
 <p>The second part should be output to a file and named
 <code class="docutils literal notranslate"><span class="pre">filename_hybridcript</span></code></p>
-</div>
-<div class="section" id="deployment">
+</section>
+<section id="deployment">
 <h3>Deployment<a class="headerlink" href="#deployment" title="Permalink to this heading"></a></h3>
-</div>
-<div class="section" id="decryption">
+</section>
+<section id="decryption">
 <h3>Decryption<a class="headerlink" href="#decryption" title="Permalink to this heading"></a></h3>
 <p>The extra data will be sent to the client once the client has
 successfully logged in (same as the HybridCrypt keys)</p>
 <p>The data sent from the Server is not encrypted in any form.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -225,7 +230,7 @@ successfully logged in (same as the HybridCrypt keys)</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2018-2022.</p>
+    <p>&#169; Copyright 2018-2023.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

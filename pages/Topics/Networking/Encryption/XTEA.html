@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>XTEA &mdash; Wiki  documentation</title>
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
@@ -13,11 +14,11 @@
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
         <script src="../../../../_static/jquery.js"></script>
-        <script src="../../../../_static/underscore.js"></script>
         <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
         <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
         <script src="../../../../_static/js/external-hyperlinks.js"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
@@ -31,12 +32,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../../index.html" class="icon icon-home"> Wiki
-            <img src="https://raw.githubusercontent.com/Metin2-Dev/Assets/main/128_round_black.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Wiki
+              <img src="https://raw.githubusercontent.com/Metin2-Dev/Assets/main/128_round_black.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -161,11 +166,11 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../index.html">Topics</a> &raquo;</li>
-          <li><a href="../index.html">Networking</a> &raquo;</li>
-          <li><a href="index.html">Encryption</a> &raquo;</li>
-      <li>XTEA</li>
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Topics</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Networking</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Encryption</a></li>
+      <li class="breadcrumb-item active">XTEA</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/Metin2-Dev/wiki-beta-dev/blob/beta/docs/pages/Topics/Networking/Encryption/XTEA.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -175,9 +180,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="xtea">
+  <section id="xtea">
 <h1>XTEA<a class="headerlink" href="#xtea" title="Permalink to this heading"></a></h1>
-<div class="section" id="xtea-encryption">
+<section id="xtea-encryption">
 <h2>XTEA Encryption<a class="headerlink" href="#xtea-encryption" title="Permalink to this heading"></a></h2>
 <p>This encryption is divided in two phases, Auth Phase and Game Phase.</p>
 <p>Every packet that uses this encryption gets encrypted and decrypted with the
@@ -195,10 +200,10 @@ change the keys.</p>
 encryptation key) by performing an XTEA of the encryptation key
 (decryptation key for the server) with a Special key.</p>
 <p>Key list</p>
-<div class="section" id="auth-phase-keys">
+<section id="auth-phase-keys">
 <h3>Auth Phase keys<a class="headerlink" href="#auth-phase-keys" title="Permalink to this heading"></a></h3>
 <p>Auth phase keys (Both for encrypting and decrypting) Usage 	First number 	Second number 	Notes</p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Region</p></th>
 <th class="head"><p>Key 1</p></th>
@@ -219,14 +224,14 @@ encryptation key) by performing an XTEA of the encryptation key
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="special-keys">
+</section>
+<section id="special-keys">
 <h3>Special keys<a class="headerlink" href="#special-keys" title="Permalink to this heading"></a></h3>
 <p>The Special key was generated by the Client and the Server during
 the login into the Game core, it is known that in very old version of M2
 (such as the Korean 2003 beta)
 the following hardcoded key might be used rather than a random generated one.</p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Special keys Usage</p></th>
 <th class="head"><p>First number</p></th>
@@ -242,9 +247,9 @@ the following hardcoded key might be used rather than a random generated one.</p
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -257,7 +262,7 @@ the following hardcoded key might be used rather than a random generated one.</p
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2018-2022.</p>
+    <p>&#169; Copyright 2018-2023.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flow &mdash; Wiki  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -13,11 +14,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
         <script src="../../../_static/js/external-hyperlinks.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -31,12 +32,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../index.html" class="icon icon-home"> Wiki
-            <img src="https://raw.githubusercontent.com/Metin2-Dev/Assets/main/128_round_black.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Wiki
+              <img src="https://raw.githubusercontent.com/Metin2-Dev/Assets/main/128_round_black.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -161,10 +166,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../index.html">Topics</a> &raquo;</li>
-          <li><a href="index.html">Networking</a> &raquo;</li>
-      <li>Flow</li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Topics</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Networking</a></li>
+      <li class="breadcrumb-item active">Flow</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/Metin2-Dev/wiki-beta-dev/blob/beta/docs/pages/Topics/Networking/Flow.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -174,7 +179,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="flow">
+  <section id="flow">
 <h1>Flow<a class="headerlink" href="#flow" title="Permalink to this heading"></a></h1>
 <p>Networking in metin2 is composed by multiple agents, most of the agents
 have the purpose of serving for a specific task, them being:</p>
@@ -190,7 +195,7 @@ level step by step, assuming all the agents above are operational</p>
 <p>For the rest of this page we are going to call the agents above as agents,
 but keep in mind they can be an unique server process, a process of a
 server, a client or what corresponds to their task</p>
-<div class="section" id="concept">
+<section id="concept">
 <h2>Concept<a class="headerlink" href="#concept" title="Permalink to this heading"></a></h2>
 <p>Let’s imagine we start the client, while starting the UI the first
 thing it does is read from the settings which are the channels
@@ -202,11 +207,11 @@ accessed, how many players, and so on)</p>
 by typing a username and password, it will try to send it to the
 Authentication agent but before that synchronization comes first, after
 being synchronized the data packets are encrypted and sent</p>
-<div class="section" id="synchronization">
+<section id="synchronization">
 <h3>Synchronization<a class="headerlink" href="#synchronization" title="Permalink to this heading"></a></h3>
 <p>Both agents need to be synchronized so that they know they are both valid
-within each other, so to do that they use a <a class="reference internal" href="Synchronization/Handshake.html"><span class="doc std std-doc">Handshake</span></a>
-or <a class="reference internal" href="Synchronization/IPE.html"><span class="doc std std-doc">IPE</span></a> method, or even both, if the latter is enabled</p>
+within each other, so to do that they use a <a class="reference internal" href="Synchronization/Handshake.html"><span class="std std-doc">Handshake</span></a>
+or <a class="reference internal" href="Synchronization/IPE.html"><span class="std std-doc">IPE</span></a> method, or even both, if the latter is enabled</p>
 <p>We are not going into detail on these methods here, but you should check
 how they work to keep in mind for situations were they may come in the future</p>
 <p>The final step is setting the phase, the authentication agent sends a packet
@@ -214,15 +219,15 @@ that tells the client that they will now be operating on the login phase,
 you can read more on phases to also keep in mind, because they are an essential
 part of the network flow, telling which packets are accepted at a given moment
 depending on the current phase</p>
-</div>
-<div class="section" id="encryption">
+</section>
+<section id="encryption">
 <h3>Encryption<a class="headerlink" href="#encryption" title="Permalink to this heading"></a></h3>
 <p>After they are synchronized, any packet data that will be exchanged between
 agents will need to be encrypted, once again we are not going into detail,
-so you can check how <a class="reference internal" href="Encryption/Encryption.html"><span class="doc std std-doc">Encryption</span></a> works to keep in mind</p>
-</div>
-</div>
-</div>
+so you can check how <a class="reference internal" href="Encryption/Encryption.html"><span class="std std-doc">Encryption</span></a> works to keep in mind</p>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -235,7 +240,7 @@ so you can check how <a class="reference internal" href="Encryption/Encryption.h
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2018-2022.</p>
+    <p>&#169; Copyright 2018-2023.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

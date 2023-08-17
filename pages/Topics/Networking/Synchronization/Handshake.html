@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Handshake &mdash; Wiki  documentation</title>
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
@@ -13,11 +14,11 @@
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
         <script src="../../../../_static/jquery.js"></script>
-        <script src="../../../../_static/underscore.js"></script>
         <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
         <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
         <script src="../../../../_static/js/external-hyperlinks.js"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
@@ -31,12 +32,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../../index.html" class="icon icon-home"> Wiki
-            <img src="https://raw.githubusercontent.com/Metin2-Dev/Assets/main/128_round_black.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Wiki
+              <img src="https://raw.githubusercontent.com/Metin2-Dev/Assets/main/128_round_black.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -161,11 +166,11 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../index.html">Topics</a> &raquo;</li>
-          <li><a href="../index.html">Networking</a> &raquo;</li>
-          <li><a href="index.html">Synchronization</a> &raquo;</li>
-      <li>Handshake</li>
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Topics</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Networking</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Synchronization</a></li>
+      <li class="breadcrumb-item active">Handshake</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/Metin2-Dev/wiki-beta-dev/blob/beta/docs/pages/Topics/Networking/Synchronization/Handshake.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -175,19 +180,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="handshake">
+  <section id="handshake">
 <h1>Handshake<a class="headerlink" href="#handshake" title="Permalink to this heading"></a></h1>
 <p>A Handshake is the standard synchrony integrity verification, it is used
 to make sure that agents communicating with each other are valid and aware
 of phase states, encryption and time synchronization</p>
 <p>It is always used first before data incoming to the game or authentication
 agent can be accepted, and it is also performed when a phase change occurs</p>
-<div class="section" id="shaking">
+<section id="shaking">
 <h2>Shaking<a class="headerlink" href="#shaking" title="Permalink to this heading"></a></h2>
 <p>To perform a handshake, the server generates a <em>Hand</em> which we are
 going to call the <code class="docutils literal notranslate"><span class="pre">right</span> <span class="pre">hand</span></code>, gets it current time and a time delta (used for
 synchronizing the time with the other agent) and puts it in a
-<a class="reference internal" href="../Data/Packets/Handshake.html"><span class="doc std std-doc">Handshake</span></a> packet</p>
+<a class="reference internal" href="../Data/Packets/Handshake.html"><span class="std std-doc">Handshake</span></a> packet</p>
 <p>It stores the hand and after that it sends it to the other agent and in the
 <strong>next instruction</strong>, stores the current time and flags that a handshake
 is happening, so that it can be used later for validation and synchronization</p>
@@ -200,9 +205,9 @@ one that was last sent, if it isn’t the connection is terminated</p>
 <p>Next it checks if it is in the Handshake Phase, if so it will validate if the
 time between shakes is valid and synchronized, the process is explained below</p>
 <p>If it is valid and synchronized, other synchronizations are perform, like the
-<a class="reference internal" href="IPE.html"><span class="doc std std-doc">IPE</span></a></p>
-</div>
-<div class="section" id="synchronization-validation">
+<a class="reference internal" href="IPE.html"><span class="std std-doc">IPE</span></a></p>
+</section>
+<section id="synchronization-validation">
 <h2>Synchronization validation<a class="headerlink" href="#synchronization-validation" title="Permalink to this heading"></a></h2>
 <p>First it will start by checking if the received time delta from the packet
 is below 0, if so it will return as invalid</p>
@@ -223,13 +228,13 @@ server, then validate and so on…</p>
 <p>There is a limit for how many times this process can be retried,
 by default its <code class="docutils literal notranslate"><span class="pre">32</span></code> times, but depends on the server settings for this
 option</p>
-</div>
-<div class="section" id="hand-generation">
+</section>
+<section id="hand-generation">
 <h2>Hand generation<a class="headerlink" href="#hand-generation" title="Permalink to this heading"></a></h2>
 <p>The hand is a pseudo random number from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">4.294.967.295</span></code>
 (the range of a 32-bit unsigned integer)</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -242,7 +247,7 @@ option</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2018-2022.</p>
+    <p>&#169; Copyright 2018-2023.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

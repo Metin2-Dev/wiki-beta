@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IPE &mdash; Wiki  documentation</title>
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
@@ -13,11 +14,11 @@
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
         <script src="../../../../_static/jquery.js"></script>
-        <script src="../../../../_static/underscore.js"></script>
         <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
         <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
         <script src="../../../../_static/js/external-hyperlinks.js"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
@@ -31,12 +32,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../../index.html" class="icon icon-home"> Wiki
-            <img src="https://raw.githubusercontent.com/Metin2-Dev/Assets/main/128_round_black.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Wiki
+              <img src="https://raw.githubusercontent.com/Metin2-Dev/Assets/main/128_round_black.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -161,11 +166,11 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../index.html">Topics</a> &raquo;</li>
-          <li><a href="../index.html">Networking</a> &raquo;</li>
-          <li><a href="index.html">Encryption</a> &raquo;</li>
-      <li>IPE</li>
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Topics</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Networking</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Encryption</a></li>
+      <li class="breadcrumb-item active">IPE</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/Metin2-Dev/wiki-beta-dev/blob/beta/docs/pages/Topics/Networking/Encryption/IPE.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -175,53 +180,53 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="ipe">
+  <section id="ipe">
 <h1>IPE<a class="headerlink" href="#ipe" title="Permalink to this heading"></a></h1>
 <p>Diffie-Hellman key exchange</p>
 <p>The improved packet encryption is performed by choosing a suitable cipher
 based from the shared secret that is exchanged with Diffie-Hellman.</p>
-<div class="section" id="unified-diffie-hellman-key-exchange">
+<section id="unified-diffie-hellman-key-exchange">
 <h2>Unified Diffie-Hellman key exchange<a class="headerlink" href="#unified-diffie-hellman-key-exchange" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Initialize RFC 5114’s 1024-bit MODP standarized parameters (p, g, q)</p></li>
 <li><p>Randomly generate a Static and Ephemeral public and private keys with Unified Diffie-Hellman.</p></li>
 <li><p>Pass the shared secret length and public keys to the network and perform an agreement with the received public keys and shared secret length.</p></li>
 </ul>
-<div class="section" id="cipher-selection">
+<section id="cipher-selection">
 <h3>Cipher selection<a class="headerlink" href="#cipher-selection" title="Permalink to this heading"></a></h3>
-<div class="section" id="a">
+<section id="a">
 <h4>A<a class="headerlink" href="#a" title="Permalink to this heading"></a></h4>
 <p>Takes the remained of the first byte in the shared secret block with the shared
 secret size. This number will determine where the first cipher number that is
 stored in the shared secret block.</p>
-</div>
-<div class="section" id="b">
+</section>
+<section id="b">
 <h4>B<a class="headerlink" href="#b" title="Permalink to this heading"></a></h4>
 <p>Takes the remained of the second byte in the shared secret block with the shared
 secret size. This number will determine where the second cipher number that
 is stored in the shared secret block.</p>
-</div>
-<div class="section" id="c">
+</section>
+<section id="c">
 <h4>C<a class="headerlink" href="#c" title="Permalink to this heading"></a></h4>
 <p>Takes the remained of this two bytes generated from the secret block with the max algorithms supported and pick an algorithm.</p>
-</div>
-<div class="section" id="d">
+</section>
+<section id="d">
 <h4>D<a class="headerlink" href="#d" title="Permalink to this heading"></a></h4>
 <p>The shared secret block contain the algorithm’s keys and a block data
 (a random block is being used because some algorithms do not support IV),
 that will be used to crypt the packets.</p>
-</div>
-<div class="section" id="e">
+</section>
+<section id="e">
 <h4>E<a class="headerlink" href="#e" title="Permalink to this heading"></a></h4>
 <p>The selected cipher will be processed with CTR Mode and the generated IV</p>
-</div>
-<div class="section" id="f">
+</section>
+<section id="f">
 <h4>F<a class="headerlink" href="#f" title="Permalink to this heading"></a></h4>
 <p>If the keys are generated by the server, the first cipher will be the
 encryption cipher. the second will be the decryption cipher.
 The keys are inverted in client side.</p>
 <p>(The lengths are the default lengths assigned to the algorithm)</p>
-<div class="section" id="appendix">
+<section id="appendix">
 <h5>Appendix<a class="headerlink" href="#appendix" title="Permalink to this heading"></a></h5>
 <p>Secret block content:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Start</span> <span class="n">of</span> <span class="n">shared</span> <span class="n">data</span>
@@ -233,8 +238,8 @@ The keys are inverted in client side.</p>
 <span class="n">End</span> <span class="n">of</span> <span class="n">shared</span> <span class="n">data</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="known-algorithms">
+</section>
+<section id="known-algorithms">
 <h5>Known Algorithms<a class="headerlink" href="#known-algorithms" title="Permalink to this heading"></a></h5>
 <ul class="simple">
 <li><p>RC6</p></li>
@@ -251,11 +256,11 @@ The keys are inverted in client side.</p>
 <li><p>TEA</p></li>
 <li><p>SHACAL2</p></li>
 </ul>
-</div>
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -268,7 +273,7 @@ The keys are inverted in client side.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2018-2022.</p>
+    <p>&#169; Copyright 2018-2023.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
