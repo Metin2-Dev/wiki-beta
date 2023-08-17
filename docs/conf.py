@@ -19,13 +19,11 @@ import sys
 # Extra paths
 sys.path.insert(0, os.path.abspath('_ext'))
 
-
 # -- Project information -----------------------------------------------------
 
 project = 'Wiki'
 copyright = f'2018-{datetime.datetime.now().year}'
-author = 'RewardMetin2'
-
+author = 'Metin2-Dev'
 
 # -- General configuration ---------------------------------------------------
 
@@ -33,9 +31,9 @@ author = 'RewardMetin2'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-	'myst_parser',
-	'sphinx_rtd_theme',
-	'edit_on_github',
+    'myst_parser',
+    'sphinx_rtd_theme',
+    'edit_on_github',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -45,7 +43,6 @@ templates_path = ['_templates']
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -57,13 +54,13 @@ html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 html_context = {
-  'display_github': True,
-  'github_user': 'RewardMetin2',
-  'github_repo': 'Wiki',
-  'github_version': 'master/docs/',
+    'display_github': True,
+    'github_user': 'Metin2-Dev',
+    'github_repo': 'wiki-beta-dev',
+    'github_version': 'beta/docs/',
 }
 
-html_logo = "_static/img/logos/128_icon.png"
+html_logo = "https://raw.githubusercontent.com/Metin2-Dev/Assets/main/128_round_black.png"
 
 html_theme_options = {
     'logo_only': False,
@@ -73,10 +70,9 @@ html_theme_options = {
 
 # CSS Files
 html_css_files = [
-	'css/custom.css',
-	'css/algolia.css',
-	'https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css',
-	'css/rtd_dark.css'
+    'css/custom.css',
+    'css/algolia.css',
+    'https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css',
 ]
 
 # Javascript files
@@ -90,12 +86,10 @@ rst_prolog = """
 
 """
 
-
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-
 
 # Pygments configuration
 pygments_style = "vs"
@@ -103,7 +97,6 @@ pygments_style = "vs"
 # Supress Warning
 surpress_warnings = ['autosectionlabel.*']
 
-
-# Edit on Github configuration
-edit_on_github_project = 'username/reponame'
-edit_on_github_branch = 'master'
+# Edit on GitHub configuration
+edit_on_github_project = 'Metin2-Dev/wiki-beta-dev'
+edit_on_github_branch = 'development'
