@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "wiki"
+version = "0.1.0"
+description = ""
+authors = ["M2Dev", "NewWars"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+sphinx = "<7.0.0"
+myst-parser = "^2.0.0"
+docutils = "<0.19"
+sphinx-rtd-theme = "^1.2.2"
+poethepoet = "^0.22.0"
+
+[tool.poe.tasks.build-docs]
+shell = """cd docs && make html"""
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+

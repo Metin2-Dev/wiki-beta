@@ -24,12 +24,6 @@ jobs:
       with:
         command: run build
 
-    #- name: Checkout gh-pages branch
-    #  uses: actions/checkout@v3
-    #  with:
-    #    repository: ${{ github.repository }}
-    #    ref: gh-pages
-
     - name: Commit documentation changes
       run: |
         git clone https://github.com/${{ github.repository }} --branch gh-pages --single-branch gh-pages

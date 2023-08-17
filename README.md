@@ -27,12 +27,13 @@ of content, for stable and latest content check the
 ### Setup
  - Install [Python 3.10](https://www.python.org/downloads/release/python-3104/)
  - Clone this repository by typing `git clone https://github.com/OriDevTeam/Metin-Wiki`
- - Install **Pipenv** by typing `pip install pipenv` on your terminal
- - Install dependencies by typing `pip install`
+ - Install [**Poetry**](https://python-poetry.org/) on your machine
+ - Install dependencies by typing `poetry install`
+ - Spawn a shell by typing `poetry shell` and you are good to go
 
 
 ## Building locally
- - Build by typing `pipenv run build`
+ - Build by typing `poe build-docs`
  - Or by doing `cd docs/` and typing `make html`
  - Whenever you need to clean type `make clean`
 
